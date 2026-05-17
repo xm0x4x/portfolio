@@ -11,7 +11,12 @@
     <header>
         <nav>
             <div class="logo">Portfolio</div>
-            <ul>
+            <button class="hamburger" id="hamburgerBtn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="#home">ホーム</a></li>
                 <li><a href="#about">自己紹介</a></li>
                 <li><a href="#portfolio">ポートフォリオ</a></li>
@@ -177,5 +182,25 @@
     <footer>
         <p>&copy; 2026 moxa. All rights reserved.</p>
     </footer>
+
+    <script>
+        // ハンバーガーメニュー機能
+        const hamburgerBtn = document.getElementById('hamburgerBtn');
+        const navMenu = document.getElementById('navMenu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            hamburgerBtn.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // メニュー内のリンククリックでメニューを閉じる
+        const navLinks = navMenu.querySelectorAll('a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                hamburgerBtn.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    </script>
 </body>
 </html>
