@@ -68,10 +68,11 @@ nav a:hover {
     background-color: white;
     border-radius: 2px;
     transition: all 0.3s ease;
+    transform-origin: center;
 }
 
 .hamburger.active span:nth-child(1) {
-    transform: rotate(45deg) translate(10px, 10px);
+    transform: rotate(45deg) translate(6.5px, 6.5px);
 }
 
 .hamburger.active span:nth-child(2) {
@@ -79,13 +80,24 @@ nav a:hover {
 }
 
 .hamburger.active span:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(6.5px, -6.5px);
 }
 
 .nav-menu {
     list-style: none;
     display: flex;
     gap: 2rem;
+}
+
+.hero {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 100px 2rem;
+    text-align: center;
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .hero-content {
